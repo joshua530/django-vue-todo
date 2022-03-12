@@ -1,0 +1,9 @@
+# cached python files
+__pycache__/
+
+# others
+todo
+!todo/
+
+# dependencies
+env/
