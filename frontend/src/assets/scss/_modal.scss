@@ -1,0 +1,69 @@
+.modal {
+  filter: none;
+  padding: 5px;
+  position: absolute;
+  top: 10vh;
+  width: 100%;
+  z-index: 1;
+  display: block !important;
+  background: none;
+
+  * {
+    margin-bottom: 0 !important;
+  }
+
+  form {
+    border: 1px solid #fff;
+    max-width: 500px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    color: #fff;
+    padding: 15px 10px;
+
+    input {
+      height: 3em;
+      outline: none;
+      padding: 0 3px;
+    }
+
+    .todo-text {
+      width: 95%;
+    }
+
+    .form-region {
+      width: 100%;
+      display: flex;
+    }
+
+    .add-task-btn {
+      background: #000;
+      border: 1px solid #fff;
+      height: 1.8em;
+      margin-left: 0.4em;
+      width: 2em;
+      cursor: pointer;
+      padding-left: 11px;
+      padding-right: 22px;
+    }
+
+    .add-task-btn:hover,
+    .add-task-btn:active {
+      background: #fff;
+      span {
+        color: #000;
+      }
+    }
+
+    .close-todo-form {
+      font-size: 25px !important;
+      display: block;
+      color: red;
+      cursor: pointer;
+      margin: 0 !important;
+      margin-left: 10px !important;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.todo-item-undone {
+  border: 1px solid orange;
+  p {
+    color: orange;
+  }
+}
+
+.todo-item-done {
+  border: 1px solid #12e812;
+  p {
+    color: #12e812;
+  }
+}

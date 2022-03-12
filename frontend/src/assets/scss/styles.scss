@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.delete-task {
+  cursor: pointer;
+  color: red;
+}
+
+.todo-item {
+  border: 1px solid #fff;
+  margin: 1em 0;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  align-items: center;
+}
+
+.todo-item .markers {
+  width: 3em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text-underline {
+  border-bottom: 1px solid #fff;
+  padding: 0 4px 3px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.user-thoughts {
+  width: 100%;
+  outline: none;
+}
+
+.btn-white {
+  display: inline-block;
+  padding: 0.5em 0.9em;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background: none;
+}
+
+.btn-white:hover {
+  color: #000;
+  background: #fff;
+}
+
+footer {
+  padding: 2em 1em;
+  border-top: 1px solid #fff;
+  margin-top: 3em;
+  font-size: 1.2rem;
+}
+
+#add-task-form {
+  position: absolute;
+  top: 0;
+  background: #000;
+}
+
+#add-task-form label {
+  font-size: 1rem;
+}
+
+#add-task-form .submit-task-data {
+  display: inline-block;
+  padding: 0.5em 0.9em;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background: none;
+  margin-top: 1em;
+}
+
+$margin-unit: 0.2em;
+
+@each $var in (1, 2, 3, 4, 5) {
+  .mr-#{$var} {
+    margin-right: $var * $margin-unit !important;
+  }
+  .ml-#{$var} {
+    margin-left: $var * $margin-unit !important;
+  }
+  .mt-#{$var} {
+    margin-top: $var * $margin-unit !important;
+  }
+  .mb-#{$var} {
+    margin-bottom: $var * $margin-unit !important;
+  }
+  .mx-#{$var} {
+    margin-left: $var * $margin-unit !important;
+    margin-right: $var * $margin-unit !important;
+  }
+  .my-#{$var} {
+    margin-top: $var * $margin-unit !important;
+    margin-bottom: $var * $margin-unit !important;
+  }
+}
+
+.nav {
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 1em 0.7em;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 2em;
+
+  .branding {
+    * {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+
+  .nav-actions {
+    display: flex;
+  }
+
+  .username,
+  .btn-action {
+    margin: 0 0.5em;
+  }
+
+  .btn-action {
+    @extend .btn-white;
+    background: none;
+    padding: 0.2em 0.5em;
+  }
+}
+
+.quotes-banner {
+  .section {
+    font-size: 12px;
+  }
+}
+
+blockquote {
+  border-color: #fff;
+}
+
+.border-white {
+  border: 0.005em solid #fff;
+}
+
+.card {
+  background: #000;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+@import 'forms';
+@import 'testimonial';
+@import 'notifications';
+@import 'modal';
+@import 'todo-items';

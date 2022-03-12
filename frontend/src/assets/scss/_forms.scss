@@ -1,0 +1,34 @@
+form {
+  padding: 1em 0;
+
+  * {
+    color: #fff;
+  }
+
+  label {
+    font-size: 1.2rem;
+    margin-bottom: 0.4em;
+    margin-right: 0.6em;
+  }
+
+  label::after {
+    content: ':';
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+  }
+
+  input {
+    margin: 0;
+    height: 1.5em !important;
+  }
+
+  textarea {
+    height: 7em;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,90 @@
+.notifications {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.notification {
+  border: 3px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7em auto;
+  width: 98%;
+  font-size: 18px;
+  padding: 0.4em 0;
+}
+
+@media screen and (min-width: 500px) {
+  .notification {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .notification {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .notification {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .notification {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .notification {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .notification {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .notification {
+    width: 30%;
+  }
+}
+
+.notification.warning {
+  border-color: #fffb00;
+}
+
+.notification.warning * {
+  color: #fffb00;
+}
+
+.notification.info {
+  border-color: #00cfff;
+}
+
+.notification.info * {
+  color: #00cfff;
+}
+
+.notification.success {
+  border-color: #00ff00;
+}
+
+.notification.success * {
+  color: #00ff00;
+}
+
+.notification.danger {
+  border-color: #ff3000;
+}
+
+.notification.danger * {
+  color: #ff3000;
+}
