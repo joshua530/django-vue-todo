@@ -4,11 +4,11 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ['DJANGO_KEY']
+SECRET_KEY = 'a1491947cdbed34cd428d257df3c406de0e26b5a'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -99,11 +99,12 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
+# Static files (CSS, JavaScript, Imaguser_id_from_requestes)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'http://localhost:3000/static/'
+STATIC_ROOT = BASE_DIR/'static'
+STATICFILES_DIRS = [BASE_DIR/'todo/static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -117,9 +118,5 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    #'ROTATE_REFRESH_TOKENS': True,
-    #'BLACKLIST_AFTER_ROTATION': True,
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
-    # 'USER_ID_FIELD': 'id',
-    #'USER_ID_CLAIM': 'user_id'
 }
