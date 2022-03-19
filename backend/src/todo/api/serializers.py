@@ -30,6 +30,7 @@ class UserSerializer(serializers.ModelSerializer):
   def validate(self, data):
     try:
       email = data['email']
+      username = data['username']
       email = email.strip()
       if (len(email) == 0):
         raise serializers.ValidationError('Email cannot be empty')
@@ -41,6 +42,9 @@ class UserSerializer(serializers.ModelSerializer):
       raise serializers.ValidationError('Email cannot be empty')
     user_with_equiv_email = User.objects.filter(email=email)
     if (len(user_with_equiv_email) != 0):
+      raise serializers.ValidationError('User with that email already exists')
+    user_with_equiv_username = User.objects.filter(username=username)
+    if (len(user_with_equiv_username) != 0):
       raise serializers.ValidationError('User with that email already exists')
     data['email'] = email
     data['password'] = password
