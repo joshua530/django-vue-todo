@@ -6,51 +6,29 @@
     <div class="col l1"></div>
     <div class="col l7">
       <h4>Testimonials</h4>
-      <div class="row">
-        <!-- <div class="testimonial col">
-          <div class="header">
-            <img
-              class="testimonial-image"
-              :src="imageApi + '/images/john.jpg'"
-              alt="john-image"
-            />
-          </div>
-          <div class="content">
-            <h6>John Doe</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div> -->
-        <!-- TODO fetch data from api -->
-        <div
-          v-for="testimonial of data"
-          :key="testimonial.id"
-          class="testimonial col"
-        >
-          <div class="header">
-            <img
-              class="testimonial-image"
-              :src="testimonial.avatar"
-              :alt="[testimonial.name, '-image']"
-            />
-          </div>
-          <div class="content">
-            <h6>{{ testimonial.name }}</h6>
-            <p>{{ testimonial.message.slice(0, 68) }}...</p>
-          </div>
+      <div class="row ml-2">
+        <div v-if="!data">
+          <span class="fa fa-spinner fa-pulse fa-2x"></span>
         </div>
-        <!-- <div class="testimonial col">
-          <div class="header">
-            <img
-              class="testimonial-image"
-              :src="imageApi + '/images/sam.jpg'"
-              alt="john-image"
-            />
+        <template v-if="data">
+          <div
+            v-for="testimonial of data"
+            :key="testimonial.id"
+            class="testimonial col"
+          >
+            <div class="header">
+              <img
+                class="testimonial-image"
+                :src="testimonial.avatar"
+                :alt="[testimonial.name, '-image']"
+              />
+            </div>
+            <div class="content">
+              <h6>{{ testimonial.name }}</h6>
+              <p>{{ testimonial.message.slice(0, 68) }}...</p>
+            </div>
           </div>
-          <div class="content">
-            <h6>Sam</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div> -->
+        </template>
       </div>
     </div>
   </div>
@@ -116,13 +94,12 @@ export default {
   },
   mounted() {
     this.getTestimonials().then((data) => {
-      console.log(data);
       this.data = data.slice(1, 4);
     });
   },
   data() {
     return {
-      data: []
+      data: null
     };
   }
 };
