@@ -4,7 +4,7 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'a1491947cdbed34cd428d257df3c406de0e26b5a'
+SECRET_KEY = os.environ['DJANGO_KEY']
 
 DEBUG = False
 
