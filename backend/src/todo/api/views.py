@@ -29,7 +29,6 @@ def user_id_from_auth_token(auth_token):
 class UserCreatedResponseRenderer(JSONRenderer):
     def render(self, data, accepted_media_type=None, renderer_context=None):
         response = data
-        print(data)
         fields = ['username','email','password']
         for field in fields:
             if field in data.keys():
