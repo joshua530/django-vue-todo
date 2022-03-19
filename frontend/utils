@@ -1,4 +1,3 @@
 #!/bin/bash
 gnome-terminal -- npm run serve &&
-gnome-terminal -- php -S localhost:3000 index.php
 gnome-terminal -- sh -c ". ../backend/env/bin/activate; python ../backend/src/manage.py runserver"
