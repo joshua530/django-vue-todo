@@ -29,8 +29,12 @@ def user_id_from_auth_token(auth_token):
 class UserCreatedResponseRenderer(JSONRenderer):
     def render(self, data, accepted_media_type=None, renderer_context=None):
         response = data
-        if "non_field_errors" not in data.keys():
-            response = {"message": "User creation was successful"}
+        print(data)
+        fields = ['username','email','password']
+        for field in fields:
+            if field in data.keys():
+                response = {"message": data[field]}
+            
         return super().render(response, accepted_media_type, renderer_context)
 
 
