@@ -41,13 +41,6 @@ class UserCreatedResponseRenderer(JSONRenderer):
 class UserCreationView(generics.CreateAPIView):
     serializer_class = UserSerializer
     renderer_classes = [UserCreatedResponseRenderer, BrowsableAPIRenderer]
-    # TODO remove after verification that users are created without issues
-    # def perform_create(self, serializer):
-    #     email = serializer.validated_data["email"]
-    #     password = serializer.validated_data["password"]
-    #     username = serializer.validated_data["username"]
-    #     user = User(email=email, password=password, username=username)
-    #     return user.save()
 
 
 class UserTodoListView(generics.ListAPIView):
