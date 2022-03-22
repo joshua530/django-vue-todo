@@ -2,4 +2,7 @@
 
 sudo -u postgres psql -f "init.sql"
 
+python3 manage.py migrate
+# create tables whose creation is deferred to avoid the
+# 'table does not exist' error
 python3 manage.py migrate --run-syncdb
