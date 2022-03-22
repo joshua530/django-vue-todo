@@ -8,7 +8,7 @@ SECRET_KEY = os.environ['DJANGO_KEY']
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -102,7 +102,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Imaguser_id_from_requestes)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'http://localhost:3000/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR/'static'
 STATICFILES_DIRS = [BASE_DIR/'todo/static']
 
