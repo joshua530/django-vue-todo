@@ -7,6 +7,10 @@ The app allows users to:
 - update the todo items
 - delete the todo items
 
-It is composed of a vue js frontend and a backend implemented using the
-django rest framework
-JWT is used for authentication and session management
+### Technologies used
+
+It is a single page application implemented using:
+- vue js for the frontend
+- django for the server side language. The REST api is implemented using the django rest framework
+- authentication is done using JWT
+- postgresql is used for the database
