@@ -1,4 +1,4 @@
-# Banking application
+# Todo application
 ![license](https://img.shields.io/github/license/joshua530/django-vue-todo?style=plastic&color=green)
 ***
 
