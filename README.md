@@ -15,8 +15,8 @@
 > ![home page screenshot](todos.png)
 
 ## Description
-A simple todo list
-This application is for keeping record of todo items
+A simple todo list\
+This application is for keeping record of todo items\
 Once a user creates an account, they will be able to login and:
 1. Create todo items
 2. Mark a todo item as either done or undone
@@ -46,6 +46,7 @@ Run `python manage.py runserver`
 ## Technologies used
 1. python django framework
 2. vue js
+3. postgresql for the database
 
 The frontend is a single page application which accesses the backend as a rest api.
 JWT is used for authentication
