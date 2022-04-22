@@ -3,7 +3,7 @@
 ***
 
 ## Previews
-> [Click here](https://) for live demo
+> [Click here](http://ec2-34-226-213-199.compute-1.amazonaws.com/login) for live demo
 > 
 > **Login page**
 > ![login page screenshot](login.png)
