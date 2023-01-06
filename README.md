@@ -13,7 +13,7 @@
 > ![home page screenshot](todos.png)
 
 ## Description
-A simple todo list\
+A simple todo list tracker\
 This application is for keeping record of todo items\
 Once a user creates an account, they will be able to login and:
 1. Create todo items
