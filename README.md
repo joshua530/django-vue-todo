@@ -37,7 +37,7 @@ Information on virtual environment creation and activation can be found [here](h
 
 Run `pip install -r requirements.txt` to install project dependencies. If pip is not present on your system, you can find guidelines on installation [here](https://pip.pypa.io/en/stable/installation/)
 
-Set the `DJANGO_KEY` environment variable
+Set the `DJANGO_KEY` environment variable. You can also hard code it in the settings.py file
 
 Run `python manage.py runserver`
 
